@@ -1,0 +1,110 @@
+button{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(125,0,0);
+    width: 150px;
+    height: 75px;
+    border-color: black;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+
+}
+
+button:hover{
+    background-color: rgb(150,0,0);
+
+}
+
+button:active{
+    background-color: rgb(200,0,0);
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-paragraph{
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-shadow: black 3px 3px;
+    width: 1000px;
+    color: white;
+
+}
+.main-page{
+    background-image: url("thumbnail1.png");
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+        background-size: cover;
+
+}
+.lore{
+    display:flex;
+    justify-content: center;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: rgb(150,0,0);
+    text-shadow: black 5px 5px;
+    margin-top: 0px;
+
+
+}
+.span-header{
+    background-color: rgba(0,0,0,0);
+    padding: 10px 10px 10px 10px
+}
+h2{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: rgb(150,0,0);
+    text-shadow: black 5px 5px;
+}
+
+body{
+     background-color: rgba(0,0,0,0.9);
+     font-size: 32px;
+}
+
+.thumb1{
+    width: 700px;
+    display: inline-block;
+    vertical-align: top;
+   background-color: rgba(0,0,0,0.2);
+   margin: 60px;
+   color: white;
+   font-family: Arial;
+   text-shadow: black 1px 1px;
+   text-align: center;
+}
+.thumbnail1{
+    width: 700px;
+    display: inline-block;
+
+    html {
+        overflow-y: scroll;
+    }
