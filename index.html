@@ -71,6 +71,12 @@
         channel: '1225361918131310623' // #general
     })
 </script>
+    <script>        fetch("https://api.steampowered.com/IGameServersService/GetServerList/v1/?key=40341DD4F39D6D947A73DB7BB057FD26&filter=addr\147.185.221.16:16261")    
+  .then(response => response.json())    
+  .then(data => {                if (data.error) {                    document.getElementById("serverName").innerText = "Error fetching data";                } else {                    document.getElementById("serverName").innerText = data.server_name;                    document.getElementById("playerCount").innerText = data.players;                    document.getElementById("mapName").innerText = data.map;                }            })     
+  .catch(error => {                document.getElementById("serverName").innerText = "API not reachable";                console.error("Error fetching server info:", error);            }); 
+    </script>
+
   </body>
 
 </html>
