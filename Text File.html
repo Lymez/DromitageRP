@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text File Selection Output</title>
+</head>
+<body>
+    <h1>Text File Selection</h1>
+    <div id="output">Loading...</div>
+
+    <script>
+        const jsonUrl = "https://raw.githubusercontent.com/Lymez/DromitageRP/main/data.json";
+
+        // Fetch the text file and display part of it
+        fetch(jsonUrl) // Change this path to your actual file location
+            .then(response => response.json())
+            .then(text => {
+                // Select a portion of the text (e.g., first 100 characters)
+               // const selection = text; // You can modify this part
+                document.getElementById('output').innerText = ${text.name};
+            })
+            .catch(error => document.getElementById('output').innerText = selection;('Error reading the file:', error));
+    </script>
+</body>
+</html>
