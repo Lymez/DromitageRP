@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🪓 DromitageRP - Info 🪓</title>
 <link rel="stylesheet" href="info.css">
 <link rel="icon" type="image/x-icon" href="survivor.png">
@@ -20,9 +22,9 @@
 
 <h1>🖥️ Server 🖥️</h1>
 <p>
-    &#x2022 Server IP: play.dromitagerp.com<br>
+    &#x2022 Server IP: 147.185.221.16<br>
     &#x2022 Server Port: 52271<br>
-    &#x2022 <a href="steam://run/108600//+connect 147.185.221.16:52271/"><button>LAUNCH GAME</button></a><br><br><br>
+    &#x2022 <a href="steam://connect/147.185.221.16:16261?appid=108600"><button>LAUNCH GAME</button></a><br><br><br>
     &#x2022 Whitelisted Server<br>
     &#x2022 2x XP Multiplier<br>
     &#x2022 10 Free Trait Points<br>
@@ -59,8 +61,34 @@
 
 
 </p>
+<!--Discord API-->
+        <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '1225361917552492635', // DromitageRP
+        channel: '1225361918131310623' // #general
+    })</script>
 
+<div class="players">
+    <div id="output">Loading...</div>
+    <p> <span style="font-size: 15px; color: grey;">DromitageRP ©️ 2024-2025</span> </p>
+    <script>
+    const url = "https://raw.githubusercontent.com/Lymez/pz/refs/heads/main/data.json"
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const server = data.response.servers[0]; // First server in the list
 
+        // Display information
+        document.getElementById("output").innerHTML =`
+            <p>
+               <span style="font-size: 20px;">Online Players: <span style="padding: 5px; border-radius: 15px; background-color: rgba(20,20,20,1);">${server.players}</span></span>
+            </p>
+            `
+        ;
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+    </script>
+</div>
 
 </body>
 </html>

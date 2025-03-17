@@ -64,7 +64,16 @@ a{
 button:active{
     background-color: rgb(200,0,0);
 }
-
+.players{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color:rgba(0,0,0,0.98);
+    color: white;
+    font-size: 10px;
+}
 html {
     overflow-y: scroll;
 }

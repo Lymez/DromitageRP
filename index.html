@@ -2,7 +2,8 @@
 <html lang="en">
 
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🪓 DromitageRP Server 🪓</title>
     <link rel="stylesheet" href="mainpage.css">
     <link rel="icon" type="image/x-icon" href="survivor.png">
@@ -69,8 +70,29 @@
     new Crate({
         server: '1225361917552492635', // DromitageRP
         channel: '1225361918131310623' // #general
+    })</script>
+
+<div class="players">
+    <div id="output">Loading...</div>
+    <p> <span style="font-size: 15px; color: grey;">DromitageRP ©️ 2024-2025</span> </p>
+    <script>
+    const url = "https://raw.githubusercontent.com/Lymez/pz/refs/heads/main/data.json"
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const server = data.response.servers[0]; // First server in the list
+
+        // Display information
+        document.getElementById("output").innerHTML =`
+            <p>
+               <span style="font-size: 20px;">Online Players: <span style="padding: 5px; border-radius: 15px; background-color: rgba(20,20,20,1);">${server.players}</span></span>
+            </p>
+            `
+        ;
     })
-</script>
+    .catch(error => console.error("Error loading JSON:", error));
+    </script>
+</div>
   </body>
 
 </html>
