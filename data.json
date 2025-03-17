@@ -11,7 +11,7 @@
         "version": "1.0.0.0",
         "product": "zomboid",
         "region": -1,
-        "players": 1,
+        "players": 10,
         "max_players": 30,
         "bots": 0,
         "map": "AZSpawn;Muldraugh, KY",
