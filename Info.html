@@ -75,6 +75,7 @@
     <p> <span style="font-size: 15px; color: grey;">DromitageRP ©️ 2024-2025</span> </p>
     <script>
     const url = "https://raw.githubusercontent.com/Lymez/pz/refs/heads/main/data.json"
+        function UpdatePlayers(){
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -89,6 +90,9 @@ fetch(url)
         ;
     })
     .catch(error => console.error("Error loading JSON:", error));
+    }
+    UpdatePlayers();
+    setInterval(UpdatePlayers, 300000);
     </script>
 </div>
 
